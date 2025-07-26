@@ -1,0 +1,15 @@
+#container {
+    width: 500px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    /* transform: translateX(-80%); */
+    background-color: green;
+}
