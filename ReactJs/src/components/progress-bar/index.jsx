@@ -55,24 +55,35 @@ const ProgressBar = ({ duration = 5000 }) => {
   //          clearInterval(timer)
   //     }
   // }, [])
+
   return (
-    <div>
-      <div id="container">
+    <div
+      style={{
+        display: "grid",
+        placeItems: "center",
+        height: "100vh",
+      }}
+    >
+      <div>
+        <div id="container">
+          <div
+            id="progress-bar"
+            style={{
+              transform: `translateX(${progress - 100}%)`,
+            }}
+          ></div>
+        </div>
         <div
-          id="progress-bar"
           style={{
-            transform: `translateX(${progress - 100}%)`,
+            marginTop: "20px",
+            textAlign: "center",
           }}
-        ></div>
+        >
+          <button onClick={toggleProgressBar}>
+            {isRunning ? "Stop" : "Start"}
+          </button>
+        </div>
       </div>
-      <button
-        style={{
-          marginTop: "20px",
-        }}
-        onClick={toggleProgressBar}
-      >
-        {isRunning ? "Stop" : "Start"}
-      </button>
     </div>
   );
 };
