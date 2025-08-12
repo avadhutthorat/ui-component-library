@@ -1,0 +1,8 @@
+.star__container {
+    display: flex;
+}
+
+.star__icon {
+    margin: 0 3px;
+    cursor: pointer;
+}
