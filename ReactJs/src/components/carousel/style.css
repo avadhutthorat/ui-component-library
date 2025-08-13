@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.crl_container {
+  position: relative;
+
+  width: 100vw;
+}
+
+.btn {
+  position: absolute;
+  top: 45vh;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: green;
+    color: white;
+  }
+}
+
+.crl__button--left {
+  left: 2vw;
+}
+
+.crl__button--right {
+  right: 2vw;
+}
+
+.imagesection__container {
+  height: 90vh;
+  width: 98vw;
+  margin: 5px auto;
+}
+
+.imagesection--image {
+  height: inherit;
+  width: inherit;
+}

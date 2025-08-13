@@ -1,15 +1,16 @@
 import { Suspense, lazy } from "react";
-import ProgressBar from "./components/progress-bar";
-import StarRating from "./components/star-rating";
 import Loader from "./components/loader";
 
-const StarRatingLazy = lazy(() => import("./components/star-rating"));
+const StarRating = lazy(() => import("./components/star-rating"));
+const ProgressBar = lazy(() => import("./components/progress-bar"));
+const Carousel = lazy(() => import("./components/carousel"));
 
 function App() {
   return (
     <Suspense fallback={<Loader />}>
       {/* <ProgressBar /> */}
-      <StarRatingLazy />
+      {/* <StarRating /> */}
+      <Carousel />
     </Suspense>
   );
 }
