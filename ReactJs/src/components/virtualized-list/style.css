@@ -1,0 +1,23 @@
+.container {
+  background-color: antiquewhite;
+  width: 40%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.inner-container {
+  position: relative;
+}
+
+.child-item {
+  border-bottom: 1px solid grey;
+  background-color: grey;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  width: 100%;
+  transition: transform 0.3s linear;
+}

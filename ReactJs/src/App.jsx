@@ -5,6 +5,7 @@ const StarRating = lazy(() => import("./components/star-rating"));
 const ProgressBar = lazy(() => import("./components/progress-bar"));
 const Carousel = lazy(() => import("./components/carousel"));
 const WhackMole = lazy(() => import("./components/whack-a-mole-game"));
+const VirtualizedList = lazy(() => import("./components/virtualized-list"));
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <ProgressBar /> */}
       {/* <StarRating /> */}
       {/* <Carousel /> */}
-      <WhackMole />
+      {/* <WhackMole /> */}
+      <VirtualizedList />
     </Suspense>
   );
 }
