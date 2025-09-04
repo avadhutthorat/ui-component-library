@@ -1,18 +1,15 @@
+import "./App.css";
+import { lazy, Suspense } from "react";
 
-import './App.css'
-import {lazy, Suspense} from 'react'
-
-import Loader from '@components/Loader'
-const Dropdown = lazy(() => import('@components/Dropdown'))
-
+import Loader from "@components/Loader";
+const Dropdown = lazy(() => import("@components/Dropdown"));
 
 function App() {
-
   return (
-   <Suspense fallback={<Loader />}>
+    <Suspense fallback={<Loader />}>
       <Dropdown />
-   </Suspense>
-  )
+    </Suspense>
+  );
 }
 
-export default App
+export default App;

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 5px;
   position: relative;
+  min-width: 170px;
 }
 
 .dropdown-item {
@@ -10,4 +11,8 @@
   border-bottom: 0.5px solid grey;
   width: 100%;
   flex: 0 0 auto;
+}
+
+.selected {
+  background-color: bisque;
 }
