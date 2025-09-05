@@ -1,7 +1,7 @@
-import { forwardRef, type ReactElement } from "react";
+import { forwardRef, type ReactElement, type ReactNode } from "react";
 import "./style.css";
 type DropdownContentProps = {
-  children: ReactElement | ReactElement[];
+  children: ReactNode | ReactElement[];
   isDropdownOpen: boolean;
   topPositon: number | null;
   setSelectedOption: (name: string) => void;
