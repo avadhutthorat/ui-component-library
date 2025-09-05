@@ -5,12 +5,14 @@ type DropdownContentProps = {
   isDropdownOpen: boolean;
   topPositon: number | null;
   setSelectedOption: (name: string) => void;
-  selectedOption: string;
+  selectedOption: string[];
+  mode: "single-select" | "multi-select";
 };
 
 const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(
   (props, ref) => {
-    const { children, isDropdownOpen, topPositon, setSelectedOption } = props;
+    const { children, isDropdownOpen, topPositon, setSelectedOption, mode } =
+      props;
     return (
       <div
         ref={ref}
@@ -20,9 +22,14 @@ const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(
             transform: `translateY(${topPositon || 40}px`,
           }),
         }}
-        onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+        onClick={(e: React.MouseEvent) => {
+          const value = (e.target as HTMLInputElement).value;
           const target = e.target as HTMLElement; // cast to HTMLElement
-          setSelectedOption(target.innerText);
+          if (target.innerText) {
+            setSelectedOption(target.innerText);
+          } else {
+            setSelectedOption(value);
+          }
         }}
       >
         {children}

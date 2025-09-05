@@ -5,7 +5,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 type DropdownButtonProps = {
   isDropdownOpen: boolean;
   onToggle: () => void;
-  selectedOption?: string;
+  selectedOption?: string[];
   placeholder: string;
 };
 
@@ -17,9 +17,15 @@ const DropdownButton = forwardRef<HTMLDivElement, DropdownButtonProps>(
       selectedOption = undefined,
       placeholder,
     } = props;
+
+    let placeHolderText = placeholder;
+
+    if (selectedOption?.length) {
+      placeHolderText = selectedOption.join();
+    }
     return (
       <div ref={ref} className="dropdown-btn" onClick={onToggle}>
-        {selectedOption || placeholder}
+        {placeHolderText}
         <span>
           {isDropdownOpen ? (
             <FaAngleUp className="dropdown-icon" />

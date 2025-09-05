@@ -5,11 +5,12 @@ import "./style.css";
 
 type DropdownProps = {
   placeholder: string;
-  selectedOption: string;
+  selectedOption: string[];
   setSelectedOption: (item: string) => void;
   content: string[];
   customContent?: ReactNode;
   showCustomContent?: boolean;
+  mode: "single-select" | "multi-select";
 };
 
 const Dropdown = ({
@@ -19,6 +20,7 @@ const Dropdown = ({
   content,
   customContent = <div></div>,
   showCustomContent = false,
+  mode,
 }: DropdownProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [topPositon, setTopPosition] = useState<number | null>(null);
@@ -78,19 +80,32 @@ const Dropdown = ({
         ref={dropdownContentRef}
         isDropdownOpen={isDropdownOpen}
         setSelectedOption={(item) => {
-          setIsDropdownOpen(false);
+          mode === "single-select" && setIsDropdownOpen(false);
           setSelectedOption(item);
         }}
         selectedOption={selectedOption}
+        mode={mode}
       >
         {showCustomContent && customContent
           ? customContent
           : content.map((itemName) => {
               return (
                 <div
-                  className={`dropdown-item ${selectedOption === itemName ? "selected" : ""}`}
+                  className={`${mode === "multi-select" ? "dropdown-item-container-multi" : "dropdown-item-container-single"} ${selectedOption.includes(itemName) ? "selected" : ""}`}
+                  key={itemName}
                 >
-                  {itemName}
+                  {mode === "multi-select" && (
+                    <input
+                      type="checkbox"
+                      id={itemName}
+                      className="checkbox"
+                      value={itemName}
+                      checked={selectedOption.includes(itemName)}
+                    />
+                  )}
+                  <label className={`dropdown-item`} htmlFor={itemName}>
+                    {itemName}
+                  </label>
                 </div>
               );
             })}
