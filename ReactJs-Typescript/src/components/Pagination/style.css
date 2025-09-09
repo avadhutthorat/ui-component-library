@@ -1,0 +1,41 @@
+.img {
+  height: 400px;
+  width: 200px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 35px;
+}
+
+.pages-container {
+  display: flex;
+  /* justify-content: space-between; */
+  /* margin: 0 20rem; */
+  justify-content: center;
+  column-gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.page-no {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 32%;
+  width: 3rem;
+  border-color: darkgrey;
+  opacity: 0.7;
+
+  &:hover {
+    color: white;
+    background-color: rgb(157, 157, 221);
+    border-color: rgb(157, 157, 221);
+    opacity: 1;
+  }
+}
+
+.current-page {
+  color: white;
+  background-color: rgb(64, 64, 219);
+  border-color: rgb(64, 64, 219);
+  opacity: 1;
+}
