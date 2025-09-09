@@ -10,6 +10,7 @@ const Dropdown = lazy(() => import("@components/Dropdown"));
 // @ts-ignore
 const Toast = lazy(() => import("@components/toast"));
 const Pagination = lazy(() => import("@components/Pagination"));
+const Counter = lazy(() => import("@components/Counter"));
 
 function App() {
   const queryClient = new QueryClient();
@@ -20,7 +21,8 @@ function App() {
         {/* <Dropdown mode={"single-select"} key={"single"} /> */}
         {/* <Dropdown mode={"multi-select"} key={"multiple"} /> */}
         {/* <Toast /> */}
-        <Pagination />
+        {/* <Pagination /> */}
+        <Counter />
       </Suspense>
     </QueryClientProvider>
   );
