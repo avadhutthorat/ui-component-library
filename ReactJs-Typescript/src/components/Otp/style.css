@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  gap: 5px;
+}
+
+.otp {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid grey;
+  font-size: xx-large;
+  text-align: center;
+}
