@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { KeyboardEvent } from "react";
 import "./style.css";
 
@@ -9,6 +9,15 @@ type OtpPropsType = {
 const Otp = ({ length = 6 }: OtpPropsType) => {
   const [otp, setOtp] = useState(new Array(length).fill(""));
   const otpRef = useRef<(HTMLInputElement | null)[]>([]);
+
+  useEffect(() => {
+    setOtp(new Array(length).fill(""));
+    otpRef.current[0]?.focus();
+  }, [length]);
+
+  //   useEffect(() => {
+  //     otpRef.current[0]?.focus();
+  //   }, []);
 
   const keyDownHandler = (
     e: KeyboardEvent<HTMLInputElement>,

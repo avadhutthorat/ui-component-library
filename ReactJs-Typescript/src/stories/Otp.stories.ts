@@ -20,6 +20,6 @@ type Story = StoryObj<typeof Otp>;
 
 export const Default: Story = {
   args: {
-    length: 5,
+    length: 7,
   },
 };
