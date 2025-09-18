@@ -12,6 +12,8 @@ const Toast = lazy(() => import("@components/toast"));
 const Pagination = lazy(() => import("@components/Pagination"));
 const Counter = lazy(() => import("@components/Counter"));
 const Otp = lazy(() => import("@components/Otp"));
+const HomeLayout = lazy(() => import("@components/HomeLayout"));
+const Typeahead = lazy(() => import("@components/Typeahead"));
 
 function App() {
   const queryClient = new QueryClient();
@@ -24,7 +26,9 @@ function App() {
         {/* <Toast /> */}
         {/* <Pagination /> */}
         {/* <Counter /> */}
-        <Otp />
+        {/* <Otp /> */}
+        {/* <HomeLayout /> */}
+        <Typeahead />
       </Suspense>
     </QueryClientProvider>
   );

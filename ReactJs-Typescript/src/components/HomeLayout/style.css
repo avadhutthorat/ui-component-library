@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  font-family: cursive;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+header,
+nav,
+section,
+footer {
+  border: 1px solid black;
+}
+
+header {
+  height: 5vh;
+}
+
+nav {
+  height: 5vh;
+}
+
+section {
+  height: 80vh;
+}
+
+footer {
+  height: 10vh;
+}
+
+.nav_items_container {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
