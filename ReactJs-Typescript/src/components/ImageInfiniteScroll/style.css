@@ -1,0 +1,13 @@
+.img_style {
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.imglist_container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}

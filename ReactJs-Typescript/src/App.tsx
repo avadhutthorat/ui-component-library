@@ -15,6 +15,9 @@ const Otp = lazy(() => import("@components/Otp"));
 const HomeLayout = lazy(() => import("@components/HomeLayout"));
 const Typeahead = lazy(() => import("@components/Typeahead"));
 const StopWatch = lazy(() => import("@components/StopWatch"));
+const ImageInfiniteScroll = lazy(
+  () => import("@components/ImageInfiniteScroll")
+);
 
 function App() {
   const queryClient = new QueryClient();
@@ -31,6 +34,7 @@ function App() {
         {/* <HomeLayout /> */}
         {/* <Typeahead /> */}
         {/* <StopWatch /> */}
+        <ImageInfiniteScroll />
       </Suspense>
     </QueryClientProvider>
   );
