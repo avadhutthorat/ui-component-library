@@ -14,6 +14,7 @@ const Counter = lazy(() => import("@components/Counter"));
 const Otp = lazy(() => import("@components/Otp"));
 const HomeLayout = lazy(() => import("@components/HomeLayout"));
 const Typeahead = lazy(() => import("@components/Typeahead"));
+const StopWatch = lazy(() => import("@components/StopWatch"));
 
 function App() {
   const queryClient = new QueryClient();
@@ -28,7 +29,8 @@ function App() {
         {/* <Counter /> */}
         {/* <Otp /> */}
         {/* <HomeLayout /> */}
-        <Typeahead />
+        {/* <Typeahead /> */}
+        {/* <StopWatch /> */}
       </Suspense>
     </QueryClientProvider>
   );

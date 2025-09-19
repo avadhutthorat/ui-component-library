@@ -14,7 +14,7 @@ function App() {
       {/* <StarRating /> */}
       {/* <Carousel /> */}
       {/* <WhackMole /> */}
-      <VirtualizedList />
+      {/* <VirtualizedList /> */}
     </Suspense>
   );
 }
