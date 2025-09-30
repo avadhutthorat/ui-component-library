@@ -5,6 +5,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 // @ts-ignore
 import Loader from "@components/Loader";
+import Homepage from "./layout/homepage";
 // @ts-ignore
 const Dropdown = lazy(() => import("@components/Dropdown"));
 // @ts-ignore
@@ -18,6 +19,8 @@ const StopWatch = lazy(() => import("@components/StopWatch"));
 const ImageInfiniteScroll = lazy(
   () => import("@components/ImageInfiniteScroll")
 );
+const Virtualization = lazy(() => import("@components/Virtualization"));
+const Tooltip = lazy(() => import("@components/Tooltip/story.tsx"));
 
 function App() {
   const queryClient = new QueryClient();
@@ -34,7 +37,10 @@ function App() {
         {/* <HomeLayout /> */}
         {/* <Typeahead /> */}
         {/* <StopWatch /> */}
-        <ImageInfiniteScroll />
+        {/* <ImageInfiniteScroll /> */}
+        {/* <Homepage /> */}
+        {/* <Virtualization /> */}
+        <Tooltip />
       </Suspense>
     </QueryClientProvider>
   );

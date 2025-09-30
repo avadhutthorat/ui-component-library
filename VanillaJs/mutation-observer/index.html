@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">Hello Word</div>
+    <button class="add-node">Add Node</button>
+    <button class="text-change">change text</button>
+    <script>
+      const btn = document.querySelector(".add-node");
+      const text = document.querySelector(".text-change");
+      const target = document.querySelector(".container");
+
+      btn.addEventListener("click", (e) => {
+        const div = document.createElement("div");
+        div.textContent = "New Div added";
+        target.appendChild(div);
+      });
+
+      text.addEventListener("click", () => {
+        target.textContent = "Siya Thorat";
+      });
+
+      const callback = (mutationList, observer) => {
+        console.log({ mutationList });
+
+        for (let mutation of mutationList) {
+          if (mutation.type == "childList") {
+            console.log(
+              `New node added with name - ${mutation.addedNodes[0].innerText}`
+            );
+          } else if(mutation.type == 'childList') {
+            console.log('')
+          }
+        }
+      };
+
+      const observer = new MutationObserver(callback);
+
+      observer.observe(target, {
+        childList: true,
+        attributes: true,
+        characterData: true,
+        subtree: true,
+      });
+    </script>
+  </body>
+</html>

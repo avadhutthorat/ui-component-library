@@ -55,6 +55,7 @@ const ImageList = ({
           width="300px"
           height={"500px"}
           className="img_style"
+          fetchPriority="high"
         />
       ))}
       {isLoading && <div>Loading ...</div>}
