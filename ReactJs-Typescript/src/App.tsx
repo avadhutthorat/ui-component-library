@@ -21,6 +21,7 @@ const ImageInfiniteScroll = lazy(
 );
 const Virtualization = lazy(() => import("@components/Virtualization"));
 const Tooltip = lazy(() => import("@components/Tooltip/story.tsx"));
+const FileUploader = lazy(() => import("@components/FileUploader"));
 
 function App() {
   const queryClient = new QueryClient();
@@ -40,7 +41,8 @@ function App() {
         {/* <ImageInfiniteScroll /> */}
         {/* <Homepage /> */}
         {/* <Virtualization /> */}
-        <Tooltip />
+        {/* <Tooltip /> */}
+        <FileUploader />
       </Suspense>
     </QueryClientProvider>
   );
