@@ -1,4 +1,5 @@
 import Tooltip from "./index";
+import TooltipReactPortal from "./tooltip-reactportal";
 
 const TooltipStory = () => {
   return (
@@ -8,9 +9,12 @@ const TooltipStory = () => {
         margin: "100px",
       }}
     >
-      <Tooltip content="This is tooltip text">
+      {/* <Tooltip content="This is tooltip text">
         <button className="btn"> Hover over </button>
-      </Tooltip>
+        </Tooltip> */}
+      <TooltipReactPortal tooltipText="This is tooltip text">
+        <button className="btn"> Hover over </button>
+      </TooltipReactPortal>
     </div>
   );
 };
