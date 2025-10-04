@@ -24,6 +24,7 @@ function ReduxToolkitCounter() {
         <button onClick={() => dispatch(increment())}>+</button>
         <span>count is {counterStore.count}</span>
         <button onClick={() => dispatch(decrement())}>-</button>
+        <button onClick={() => dispatch(incrementByAmount(5))}>+5</button>
       </div>
     </>
   );
