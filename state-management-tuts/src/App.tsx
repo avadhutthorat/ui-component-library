@@ -1,6 +1,7 @@
 import "./App.css";
 import ReduxCounter from "./features/redux-test";
 import ReduxToolkitCounter from "./features/redux-toolkit";
+import CounterUseReducer from "./features/use-reducer";
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
       <div>
         <h3>Redux Toolkit</h3>
         <ReduxToolkitCounter />
+      </div>
+      <div>
+        <h3>Use Reducer</h3>
+        <CounterUseReducer />
       </div>
     </div>
   );
