@@ -1,0 +1,28 @@
+.gmail-container {
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  height: 10vh;
+}
+
+main {
+  display: flex;
+  height: 90vh;
+  width: 100vw;
+}
+
+.search {
+  border: 1px solid gray;
+}
+
+aside {
+  flex-basis: 20%;
+  border: 1px solid gray;
+}
+
+section {
+  flex-basis: 80%;
+  border: 1px solid gray;
+}

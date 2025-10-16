@@ -1,4 +1,5 @@
-import { useReducer } from "react";
+import { useMemo, useReducer, useState } from "react";
+import Child from "./child";
 
 type initialStateType = {
   count: number;
@@ -30,6 +31,8 @@ const reducer = (
 
 function CounterUseReducer() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [name, setName] = useState(0);
+  const mem = useMemo(() => state.count, [state.count]);
 
   return (
     <>
@@ -49,6 +52,11 @@ function CounterUseReducer() {
         >
           +5
         </button>
+        <button onClick={() => setName(Math.random() * 1000)}>
+          Update name random
+        </button>
+        {name}
+        <Child val={1} />
       </div>
     </>
   );

@@ -23,6 +23,12 @@ const Virtualization = lazy(() => import("@components/Virtualization"));
 const Tooltip = lazy(() => import("@components/Tooltip/story.tsx"));
 const FileUploader = lazy(() => import("@components/FileUploader"));
 
+const GmailLayout = lazy(() => import("@components/GmailLayout"));
+const IndeterminateCheckbox = lazy(
+  () => import("@components/IndeterminateCheckbox")
+);
+
+const Tabs = lazy(() => import("@components/Tabs"));
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -42,7 +48,10 @@ function App() {
         {/* <Homepage /> */}
         {/* <Virtualization /> */}
         {/* <Tooltip /> */}
-        <FileUploader />
+        {/* <FileUploader /> */}
+        {/* <GmailLayout /> */}
+        {/* <IndeterminateCheckbox /> */}
+        <Tabs />
       </Suspense>
     </QueryClientProvider>
   );

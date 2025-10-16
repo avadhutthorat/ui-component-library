@@ -1,0 +1,39 @@
+.tabs__container {
+  width: 400px;
+  height: 100vh;
+  /* background-color: bisque; */
+}
+
+.tabs__label__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* border-bottom: 1px solid gray; */
+}
+
+.tab__btn {
+  margin: 5px;
+  padding: 4px;
+  /* background-color: gray; */
+  /* border-bottom: 2px solid blue; */
+  font-size: larger;
+  font-weight: 700;
+  cursor: pointer;
+  color: gray;
+
+  &:hover {
+    /* border-bottom: 1px solid blue; */
+    color: blue;
+  }
+}
+
+.active {
+  color: green;
+  border-bottom: 1px solid green;
+}
+
+.tab__content {
+  height: 100%;
+  width: 100vw;
+}

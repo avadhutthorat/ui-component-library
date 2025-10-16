@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preload etc</title>
+
+    <!-- Preload -->
+    <link rel="Preload" href="script2.js" as="script"></link>
+    <link rel="Preload" href="style2.css" as="style"></link>
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="index2.html"></link>
+    <link rel="prefetch" as="script" href="script3.js"></link>
+    <link rel="prefetch" as="style" href="style3.css"></link>
+
+    <!-- Using Styles -->
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <h1>Preload prefetch and preconnect</h1>
+    <a href="index2.html">Index2.html</a>
+  </body>
+
+  <!-- Using scripts -->
+  <script src="script1.js"></script>
+  <script src="script2.js"></script>
+</html>
