@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 // @ts-ignore
 import Loader from "@components/Loader";
 import Homepage from "./layout/homepage";
+import ImperativeHandleRef from "./reactHooks/ImperativeHandleRef";
 // @ts-ignore
 const Dropdown = lazy(() => import("@components/Dropdown"));
 // @ts-ignore
@@ -29,6 +30,12 @@ const IndeterminateCheckbox = lazy(
 );
 
 const Tabs = lazy(() => import("@components/Tabs"));
+const TypingEffect = lazy(() => import("@components/TypingEffect"));
+const Todo = lazy(() => import("@misc/IndexDB"));
+const VirtualizationReactWindow = lazy(
+  () => import("@components/Virtualization-ReactWindow")
+);
+
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -51,7 +58,11 @@ function App() {
         {/* <FileUploader /> */}
         {/* <GmailLayout /> */}
         {/* <IndeterminateCheckbox /> */}
-        <Tabs />
+        {/* <Tabs /> */}
+        {/* <Todo /> */}
+        {/* <TypingEffect /> */}
+        {/* <VirtualizationReactWindow /> */}
+        <ImperativeHandleRef />
       </Suspense>
     </QueryClientProvider>
   );
