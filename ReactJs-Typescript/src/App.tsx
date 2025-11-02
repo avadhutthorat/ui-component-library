@@ -7,6 +7,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Loader from "@components/Loader";
 import Homepage from "./layout/homepage";
 import ImperativeHandleRef from "./reactHooks/ImperativeHandleRef";
+import Main from "./reactHooks/context/main";
 // @ts-ignore
 const Dropdown = lazy(() => import("@components/Dropdown"));
 // @ts-ignore
@@ -62,7 +63,8 @@ function App() {
         {/* <Todo /> */}
         {/* <TypingEffect /> */}
         {/* <VirtualizationReactWindow /> */}
-        <ImperativeHandleRef />
+        {/* <ImperativeHandleRef /> */}
+        <Main />
       </Suspense>
     </QueryClientProvider>
   );

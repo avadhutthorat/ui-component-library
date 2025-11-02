@@ -1,0 +1,10 @@
+export default function LayoutEffect() {
+  return (
+    <div
+      style={{
+        width: "100px",
+        height: "100px",
+      }}
+    ></div>
+  );
+}
