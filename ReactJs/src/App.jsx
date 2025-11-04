@@ -6,6 +6,7 @@ const ProgressBar = lazy(() => import("./components/progress-bar"));
 const Carousel = lazy(() => import("./components/carousel"));
 const WhackMole = lazy(() => import("./components/whack-a-mole-game"));
 const VirtualizedList = lazy(() => import("./components/virtualized-list"));
+const InlineEditTable = lazy(() => import("./components/Inline-edit-table"));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <Carousel /> */}
       {/* <WhackMole /> */}
       {/* <VirtualizedList /> */}
+      <InlineEditTable />
     </Suspense>
   );
 }
