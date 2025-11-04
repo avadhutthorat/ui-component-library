@@ -8,6 +8,10 @@ import Loader from "@components/Loader";
 import Homepage from "./layout/homepage";
 import ImperativeHandleRef from "./reactHooks/ImperativeHandleRef";
 import Main from "./reactHooks/context/main";
+import LayoutEffect from "./reactHooks/layoutEffect";
+import IdHook from "./reactHooks/id";
+import TransitionUse from "./reactHooks/transitionUse";
+import DefferedValue from "./reactHooks/defferedValue";
 // @ts-ignore
 const Dropdown = lazy(() => import("@components/Dropdown"));
 // @ts-ignore
@@ -64,7 +68,11 @@ function App() {
         {/* <TypingEffect /> */}
         {/* <VirtualizationReactWindow /> */}
         {/* <ImperativeHandleRef /> */}
-        <Main />
+        {/* <Main /> */}
+        {/* <LayoutEffect /> */}
+        {/* <IdHook /> */}
+        {/* <TransitionUse /> */}
+        <DefferedValue />
       </Suspense>
     </QueryClientProvider>
   );
