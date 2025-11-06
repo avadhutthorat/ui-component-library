@@ -1,6 +1,4 @@
-// // export const getServerSideProps = async () => {
-// //   return { props: data };
-// // };
+export const dynamic = "force-dynamic";
 
 const MyPosts = async (props: any) => {
   const res = await fetch("https://api.restful-api.dev/objects");
@@ -8,7 +6,9 @@ const MyPosts = async (props: any) => {
 
   return (
     <>
+      <h2>SSR</h2>
       <div>my posts</div>
+      {new Date().getSeconds()}
       <div>
         <ul>
           {lists.map((product: any) => {

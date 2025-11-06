@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "analyze": "webpack --mode production --env ANALYZE=true",
+    "analyze:static": "webpack --mode production --env ANALYZE=true && echo 'Open the analyzer tab that popped up or check the console URL.'",
+    "stats": "webpack --mode production --profile --json > stats.json",
+    "analyze:stats": "npx webpack-bundle-analyzer stats.json"
   },
   "keywords": [],
   "author": "",
@@ -15,9 +20,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
     "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.4",
+    "style-loader": "^4.0.0",
     "webpack": "^5.102.1",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }

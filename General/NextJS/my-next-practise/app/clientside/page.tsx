@@ -13,7 +13,9 @@ const MyPosts = () => {
   }, []);
   return (
     <>
+      <h2>CSR</h2>
       <div>my posts</div>
+      {new Date().getSeconds()}
       <div>
         <ul>
           {list.map((product: any) => {
